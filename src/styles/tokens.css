@@ -1,0 +1,28 @@
+:root {
+  /* Colors */
+  --color-orange: #ff6600;
+  --color-orange-hover: #e55a00;
+  --color-black: #1a1a1a;
+  --color-white: #ffffff;
+  --color-off-white: #f5f4f0;
+  --color-mid: #666666;
+
+  /* Typography */
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Spacing — 4.5vw system */
+  --pad-h: 4.5vw;
+  --space-xs: 1.5vw;
+  --space-sm: 3vw;
+  --space-md: 4.5vw;
+  --space-lg: 9vw;
+  --space-xl: 16vw;
+
+  /* Layout */
+  --content-width: calc(100% - 9vw);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.5, 0.25, 0, 1);
+  --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,63 @@
+.ticker {
+  overflow: hidden;
+  background-color: var(--color-black);
+  position: relative;
+  z-index: 1;        /* behind the portrait (z-index: 2) */
+  padding-top: 40vw; /* pushes text band down to shoulder level of the portrait */
+  padding-bottom: 0;
+}
+
+.ticker-separator {
+  height: 1px;
+  background-color: #333;
+  margin: 0 var(--pad-h);
+  width: var(--content-width);
+}
+
+/* Only show the bottom separator — top is merged with the dark hero */
+.ticker-separator:first-child {
+  display: none;
+}
+
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: ticker-scroll 20s linear infinite;
+  padding: 3vw 0;
+}
+
+.ticker-content {
+  display: flex;
+  align-items: baseline;
+}
+
+.ticker-text {
+  font-family: var(--font-display);
+  font-size: 11vw;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-white);
+  white-space: nowrap;
+  padding-right: 4vw;
+}
+
+.ticker-dash {
+  color: var(--color-orange);
+  padding: 0 2vw;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (min-width: 768px) {
+  .ticker-text {
+    font-size: 8.5vw;
+  }
+
+  .ticker-track {
+    padding: 2.5vw 0;
+  }
+}

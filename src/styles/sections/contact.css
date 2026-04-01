@@ -1,0 +1,197 @@
+/* ── Contact / Let's talk — orange background ───────────────── */
+.contact {
+  background-color: var(--color-orange);
+  padding-bottom: var(--space-xl);
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-heading-link {
+  display: inline-block;
+  padding: var(--space-xl) var(--pad-h) var(--space-md);
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+/* "Let's" line — skew on hover for personality */
+.contact-title {
+  font-family: var(--font-display);
+  font-size: 40vw;
+  font-weight: 800;
+  line-height: 0.88;
+  color: var(--color-black);
+  white-space: nowrap;
+  display: block;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.contact-heading-link:hover .contact-title {
+  transform: skewX(-4deg);
+}
+
+/* "talk." line — sized so it also fills the viewport */
+.contact-title + .contact-title {
+  font-size: 30vw;
+  transform: translateY(-5vw);
+}
+
+.contact-heading-link:hover .contact-title + .contact-title {
+  transform: translateY(-5vw) skewX(-4deg);
+}
+
+/* ── Book a call roundel ─────────────────────────────────────── */
+.contact-roundel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.4s var(--ease-out);
+  /* mobile: sits below "talk." roughly at the period position */
+  left: calc(var(--pad-h) + 52vw);
+  top: calc(var(--space-xl) + 56vw);
+  z-index: 2;
+}
+
+.contact-roundel:hover {
+  transform: scale(1.08);
+}
+
+.contact-roundel-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-black);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-roundel-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: badge-spin 16s linear infinite;
+}
+
+.contact-roundel-ring text {
+  font-family: var(--font-body);
+  font-size: 20px;
+  fill: var(--color-black);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Columns ─────────────────────────────────────────────────── */
+.contact-columns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--space-md) var(--pad-h) 0;
+  gap: var(--space-md) 0;
+  overflow-x: auto;
+}
+
+.contact-column {
+  flex: 0 0 50%;
+  min-width: 160px;
+}
+
+.contact-column-heading {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-black);
+  opacity: 0.55;
+  margin-bottom: var(--space-md);
+}
+
+.contact-column-content {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.contact-column-content p {
+  margin: 0 0 2px;
+  padding-right: 2vw;
+}
+
+.contact-column-content a {
+  color: var(--color-black);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.contact-column-content a:hover {
+  opacity: 0.6;
+}
+
+.contact-column-content a::after {
+  content: " ↗";
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .contact {
+    padding-bottom: var(--space-lg);
+  }
+
+  .contact-heading-link {
+    padding: 0 var(--pad-h) var(--space-md);
+    margin-top: 130px;
+  }
+
+  .contact-title {
+    font-size: 28vw;
+    line-height: 0.9;
+    display: inline-flex;
+  }
+
+  .contact-title + .contact-title {
+    font-size: 23vw;
+    transform: translateY(-5vw);
+  }
+
+  .contact-heading-link:hover .contact-title + .contact-title {
+    transform: translateY(-5vw) skewX(-4deg);
+  }
+
+  .contact-columns {
+    flex-wrap: nowrap;
+    overflow: visible;
+    gap: 0;
+    padding-top: var(--space-md);
+  }
+
+  .contact-column {
+    flex: 1 0 20%;
+  }
+
+  .contact-column-heading {
+    font-size: 14px;
+    margin-bottom: var(--space-xs);
+  }
+
+  .contact-column-content {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .contact-roundel {
+    width: 160px;
+    height: 160px;
+    /* position centre of roundel at the period of "talk." */
+    left: 46vw;
+    top: calc(130px + 28vw);
+  }
+}

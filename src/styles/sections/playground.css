@@ -1,0 +1,244 @@
+/* ── How I Work — Strategy → Identity → Experience ───────────── */
+.method {
+  background-color: var(--color-off-white);
+  padding: var(--space-xl) var(--pad-h);
+}
+
+.method-intro {
+  margin-bottom: var(--space-lg);
+}
+
+.method-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-mid);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.method-heading {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 9vw, 130px);
+  font-weight: 800;
+  line-height: 0.92;
+  color: var(--color-black);
+}
+
+/* ── Pillar grid ─────────────────────────────────────────────── */
+.method-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(26, 26, 26, 0.15);
+  padding-top: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.method-pillar {
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+}
+
+.method-number {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-orange);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.method-pillar-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.5vw, 64px);
+  font-weight: 800;
+  color: var(--color-black);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.method-pillar-body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-black);
+  opacity: 0.75;
+  max-width: 480px;
+}
+
+/* ── Un-Expected work grid ───────────────────────────────────── */
+.unexpected {
+  background-color: var(--color-off-white);
+  padding: var(--space-xl) 0 var(--space-xl);
+}
+
+.unexpected-heading-wrapper {
+  padding: 0 var(--pad-h);
+  margin-bottom: var(--space-lg);
+  overflow: hidden;
+}
+
+.unexpected-title {
+  font-family: var(--font-display);
+  font-size: 50vw;
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--color-black);
+  white-space: nowrap;
+  display: block;
+}
+
+.unexpected-title + .unexpected-title {
+  font-size: 17vw;
+  transform: translateY(-4vw);
+  margin-bottom: -4vw;
+}
+
+.unexpected-intro-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-mid);
+  padding: 0 var(--pad-h);
+  max-width: 360px;
+  margin-left: auto;
+  margin-bottom: var(--space-lg);
+}
+
+.unexpected-intro-text a {
+  color: var(--color-black);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+}
+
+.unexpected-intro-text a:hover {
+  color: var(--color-orange);
+}
+
+.works-grid {
+  display: flex;
+  padding: 0 var(--pad-h);
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.works-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.works-col:last-child {
+  padding-top: 14vw;
+}
+
+.work-item {
+  display: block;
+  text-decoration: none;
+  color: var(--color-black);
+  transition: transform 0.5s var(--ease-out);
+}
+
+.work-item:hover {
+  transform: rotate(2.5deg);
+}
+
+.work-item-image {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background-color: #e8e8e8;
+}
+
+.work-item-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s var(--ease-out);
+  filter: grayscale(20%);
+}
+
+.work-item:hover .work-item-image img {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
+.work-item-title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 3px;
+}
+
+.work-item-category {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .method {
+    padding: 8vw var(--pad-h);
+  }
+
+  .method-pillars {
+    flex-direction: row;
+    gap: 0;
+    margin-top: var(--space-xl);
+  }
+
+  .method-pillar {
+    flex: 1;
+    padding: 0 4vw var(--space-md);
+    border-bottom: none;
+    border-left: 1px solid rgba(26, 26, 26, 0.15);
+  }
+
+  .method-pillar:first-child {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .method-pillar:last-child {
+    padding-right: 0;
+  }
+
+  .method-pillar-body {
+    font-size: 16px;
+    max-width: none;
+  }
+
+  .unexpected {
+    padding: 6vw 0 var(--space-lg);
+  }
+
+  .unexpected-title {
+    font-size: 42vw;
+  }
+
+  .unexpected-title + .unexpected-title {
+    font-size: 15vw;
+    transform: translateY(-3.5vw);
+    margin-bottom: -3.5vw;
+  }
+
+  .unexpected-intro-text {
+    font-size: 18px;
+    max-width: 400px;
+  }
+
+  .work-item-title {
+    font-size: 18px;
+  }
+}

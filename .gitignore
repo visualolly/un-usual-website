@@ -1,0 +1,8 @@
+# Build artefacts and dev screenshots
+reference_assets/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/

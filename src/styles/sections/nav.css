@@ -1,0 +1,60 @@
+.main-nav {
+  position: fixed;
+  top: 30px;
+  left: var(--pad-h);
+  width: var(--content-width);
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.main-nav ul li {
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+.main-nav ul li:last-child {
+  flex: 1;
+  text-align: right;
+  margin-right: 0;
+}
+
+.main-nav ul li a {
+  display: inline-block;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav ul li a:hover {
+  opacity: 0.7;
+}
+
+/* "Book a call" CTA — right-aligned, with arrow */
+.nav-cta::after {
+  content: " →";
+}
+
+/* Orange theme — set link colour to orange so difference blend produces black */
+body[data-hero-theme="orange"] .main-nav ul li a {
+  color: var(--color-orange);
+}
+
+
+@media (min-width: 768px) {
+  .main-nav ul {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .main-nav ul li {
+    margin-right: 60px;
+  }
+}

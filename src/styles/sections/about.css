@@ -1,0 +1,83 @@
+.about {
+  background-color: var(--color-white);
+  position: relative;   /* allows hero portrait (z-index:2) to paint on top */
+  padding: 16vw var(--pad-h) var(--space-xl);
+  /* 16vw top padding clears the portrait overlap into the white section */
+}
+
+.about-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-mid);
+  margin-bottom: var(--space-lg);
+  display: block;
+}
+
+.about-inner {
+  margin-left: auto;
+  max-width: 100%;
+}
+
+.about-bio {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--color-black);
+}
+
+.about-bio p {
+  margin-bottom: 1.4em;
+}
+
+.about-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.about-bio a {
+  color: var(--color-black);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+}
+
+.about-bio a:hover {
+  color: var(--color-orange);
+}
+
+.about-pull {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-black);
+  margin-bottom: 1em;
+  border-left: 4px solid var(--color-orange);
+  padding-left: 1em;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 18vw var(--pad-h) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .about-label {
+    width: 56%;
+    padding-right: 10vw;
+  }
+
+  .about-inner {
+    width: 56%;
+    padding-right: 10vw;
+  }
+
+  .about-bio {
+    font-size: 28px;
+    line-height: 1.45;
+  }
+}
