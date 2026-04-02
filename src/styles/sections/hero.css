@@ -48,12 +48,13 @@
 /* ── Hero subline ───────────────────────────────────────────── */
 .hero-subline {
   font-family: var(--font-body);
-  font-size: clamp(16.5px, 1.54vw, 22px);
+  font-size: clamp(15px, 4vw, 22px);
   font-weight: 400;
   color: var(--color-white);
   opacity: 0.85;
-  padding: 1.2vw var(--pad-h) 0;
+  padding: 3vw var(--pad-h) 0;
   letter-spacing: 0.01em;
+  max-width: 26ch;
 }
 
 /* ── Hero image ─────────────────────────────────────────────── */
@@ -178,6 +179,30 @@
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */
+
+/* Mobile-specific overrides (up to 767px) */
+@media (max-width: 767px) {
+  .hero-image-wrapper {
+    margin-top: 8vw;
+    margin-bottom: -72vw;
+  }
+
+  .hero-image-wrapper img {
+    width: 74%;
+  }
+
+  .hero-badge {
+    width: 88px;
+    height: 88px;
+    bottom: 18vw;
+    left: 10vw;
+  }
+
+  .hero-badge svg.badge-ring text {
+    font-size: 20px;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-line-1 {
     font-size: 46vw;
@@ -187,13 +212,16 @@
     font-size: 22vw;
   }
 
+  .hero-subline {
+    font-size: clamp(17px, 1.54vw, 22px);
+    padding-top: 1.2vw;
+  }
+
   .hero-badge {
     width: 150px;
     height: 150px;
     bottom: 9vw;
-    /* chest/shoulder level */
     left: 26vw;
-    /* overlapping left shoulder of centred portrait */
   }
 
   .hero-badge svg.badge-ring text {

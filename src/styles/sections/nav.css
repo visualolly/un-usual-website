@@ -1,6 +1,6 @@
 .main-nav {
   position: fixed;
-  top: 30px;
+  top: 20px;
   left: var(--pad-h);
   width: var(--content-width);
   z-index: 100;
@@ -11,13 +11,18 @@
   display: flex;
   align-items: center;
   font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .main-nav ul li {
-  margin-right: 30px;
+  margin-right: 20px;
   overflow: hidden;
+}
+
+/* Hide middle nav items on mobile — only show "Let's talk →" */
+.main-nav ul li.nav-hide-mobile {
+  display: none;
 }
 
 .main-nav ul li:last-child {
@@ -49,6 +54,10 @@ body[data-hero-theme="orange"] .main-nav ul li a {
 
 
 @media (min-width: 768px) {
+  .main-nav {
+    top: 30px;
+  }
+
   .main-nav ul {
     font-size: 20px;
     line-height: 26px;
@@ -56,5 +65,9 @@ body[data-hero-theme="orange"] .main-nav ul li a {
 
   .main-nav ul li {
     margin-right: 60px;
+  }
+
+  .main-nav ul li.nav-hide-mobile {
+    display: list-item;
   }
 }
