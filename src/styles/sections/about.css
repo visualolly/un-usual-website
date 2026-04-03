@@ -2,7 +2,12 @@
   background-color: var(--color-white);
   position: relative;   /* allows hero portrait (z-index:2) to paint on top */
   padding: 16vw var(--pad-h) var(--space-xl);
-  /* 16vw top padding clears the portrait overlap into the white section */
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding-top: 36vw;
+  }
 }
 
 .about-label {
