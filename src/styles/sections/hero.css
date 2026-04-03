@@ -2,16 +2,21 @@
 .hero {
   background-color: var(--color-black);
   position: relative;
-  z-index: 2; /* stacking context above ticker (z-index:1) — ensures subline paints over ticker */
+  z-index: 2; /* stacking context above ticker (z-index:1) */
 }
 
 .hero-text-wrapper {
   padding: 0 var(--pad-h) 0;
-  overflow: hidden;
+  /* overflow:hidden moved to .hero-title-clip per-line wrappers */
 }
 
-/* Two-line title: "Un-" large / "Usual." smaller
-   Both lines fill ~95% of the viewport width               */
+/* Per-line clip wrapper — masks the slide-in animation */
+.hero-title-clip {
+  overflow: hidden;
+  display: block;
+}
+
+/* Two-line title: "Un-" large / "Usual." smaller */
 .hero-title {
   font-family: var(--font-display);
   font-weight: 800;
@@ -29,64 +34,64 @@
 
 /* "Un-" — very large, fills the line */
 .hero-line-1 {
-  font-size: 52vw;
+  font-size: 60vw;
   line-height: 0.80;
   margin-top: -0.12em;
-  /* hyphen rendered in orange */
   color: var(--color-white);
   transition-delay: 0ms;
 }
 
-/* "Usual." — sized so it also fills the line width */
+/* "Usual." */
 .hero-line-2 {
-  font-size: 24vw;
+  font-size: 27vw;
   line-height: 0.86;
   color: var(--color-white);
   transition-delay: 80ms;
 }
 
+/* ── Hero second row: Usual. + subline ──────────────────────── */
+/* Mobile: stacked column */
+.hero-second-row {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ── Hero subline ───────────────────────────────────────────── */
 .hero-subline {
   font-family: var(--font-body);
-  font-size: clamp(15px, 4vw, 22px);
+  font-size: clamp(15px, 4vw, 20px);
   font-weight: 400;
   color: var(--color-white);
   opacity: 0.85;
-  padding: 3vw var(--pad-h) 0;
+  padding: 3vw 0 0;
   letter-spacing: 0.01em;
   max-width: 26ch;
 }
 
 /* ── Hero image ─────────────────────────────────────────────── */
-/* Negative margin-bottom pulls the ticker up beneath the image.
-   The transparent bottom fade means the headshot blends into
-   the ticker section — ticker text scrolls "behind" the portrait. */
 .hero-image-wrapper {
   position: relative;
   z-index: 2;
   margin-top: 6vw;
-  margin-bottom: -66vw;
+  margin-bottom: -42vw; /* reduced from -66vw — less overlap into About section */
   padding: 0;
   display: flex;
   justify-content: center;
   overflow: visible;
-  will-change: transform; /* parallax perf hint */
+  will-change: transform;
 }
 
 .hero-image-wrapper img {
   width: 58%;
   height: auto;
   display: block;
-  /* PNG already has transparent bg + bottom fade — no extra filter */
 }
 
 /* ── Spinning badge ─────────────────────────────────────────── */
 .hero-badge {
   position: absolute;
   bottom: 11vw;
-  /* lower — sits at chest/shoulder level */
   left: 27vw;
-  /* moved in to overlap the left shoulder of the portrait */
   width: 100px;
   height: 100px;
   background-color: var(--color-orange);
@@ -158,10 +163,17 @@
 .hero[data-theme="orange"] .hero-badge svg.badge-ring text {
   fill: var(--color-white);
 }
-.hero[data-theme="orange"] .hero-badge .badge-face svg circle,
-.hero[data-theme="orange"] .hero-badge .badge-face svg path {
+/* Badge face: circle stays outline, eyes filled white, smile stroke white */
+.hero[data-theme="orange"] .hero-badge .badge-face-circle {
   stroke: var(--color-white);
+  fill: none;
+}
+.hero[data-theme="orange"] .hero-badge .badge-face-eye {
   fill: var(--color-white);
+}
+.hero[data-theme="orange"] .hero-badge .badge-face-smile {
+  stroke: var(--color-white);
+  fill: none;
 }
 
 /* Light theme */
@@ -184,7 +196,7 @@
 @media (max-width: 767px) {
   .hero-image-wrapper {
     margin-top: 8vw;
-    margin-bottom: -72vw;
+    margin-bottom: -56vw;
   }
 
   .hero-image-wrapper img {
@@ -212,9 +224,17 @@
     font-size: 22vw;
   }
 
+  /* Desktop: Usual. and subline sit side by side */
+  .hero-second-row {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 3vw;
+  }
+
   .hero-subline {
-    font-size: clamp(17px, 1.54vw, 22px);
-    padding-top: 1.2vw;
+    font-size: clamp(17px, 1.4vw, 22px);
+    padding: 0 0 2.5vw; /* lifts subline up toward x-height of Usual. */
+    max-width: 22ch;
   }
 
   .hero-badge {
