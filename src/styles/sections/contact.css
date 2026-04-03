@@ -45,15 +45,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 140px;
+  width: 110px;
+  height: 110px;
   background-color: var(--color-white);
   border-radius: 50%;
   text-decoration: none;
   transition: transform 0.4s var(--ease-out);
-  /* mobile: sits below "talk." roughly at the period position */
-  left: calc(var(--pad-h) + 52vw);
-  top: calc(var(--space-xl) + 56vw);
+  /* mobile: overlaps the period of "talk." */
+  left: calc(var(--pad-h) + 56vw);
+  top: calc(var(--space-xl) + 38vw);
   z-index: 2;
 }
 

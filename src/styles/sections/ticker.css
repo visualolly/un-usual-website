@@ -7,11 +7,24 @@
   padding-bottom: 0;
 }
 
+/* Match ticker background to hero colourway */
+body[data-hero-theme="orange"] .ticker {
+  background-color: var(--color-orange);
+}
+body[data-hero-theme="light"] .ticker {
+  background-color: var(--color-off-white);
+}
+
 .ticker-separator {
   height: 1px;
   background-color: #333;
   margin: 0 var(--pad-h);
   width: var(--content-width);
+}
+
+body[data-hero-theme="orange"] .ticker-separator,
+body[data-hero-theme="light"] .ticker-separator {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* Only show the bottom separator — top is merged with the dark hero */
@@ -42,9 +55,22 @@
   padding-right: 4vw;
 }
 
+body[data-hero-theme="orange"] .ticker-text,
+body[data-hero-theme="light"] .ticker-text {
+  color: var(--color-black);
+}
+
 .ticker-dash {
   color: var(--color-orange);
   padding: 0 2vw;
+}
+
+body[data-hero-theme="orange"] .ticker-dash {
+  color: var(--color-white);
+}
+
+body[data-hero-theme="light"] .ticker-dash {
+  color: var(--color-orange);
 }
 
 @keyframes ticker-scroll {
