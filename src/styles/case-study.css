@@ -16,21 +16,37 @@
   justify-content: space-between;
   padding: 20px var(--pad-h);
   z-index: 100;
-  mix-blend-mode: multiply; /* stays readable over light bg */
+  mix-blend-mode: difference; /* white text: visible on black, inverts to dark on light */
   font-family: var(--font-body);
   font-size: 15px;
 }
 
-.cs-nav-back,
+.cs-nav-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  letter-spacing: -0.01em;
+}
+
+.cs-logo-hyphen {
+  color: var(--color-orange);
+}
+
+.cs-nav-logo:hover {
+  opacity: 0.7;
+}
+
 .cs-nav-cta {
-  color: var(--color-black);
+  color: var(--color-white);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
-.cs-nav-back:hover,
 .cs-nav-cta:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /* ── Hero ─────────────────────────────────────────────────────── */
