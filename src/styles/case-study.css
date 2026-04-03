@@ -1,0 +1,235 @@
+/* ── Case Study — shared styles for all work pages ─────────── */
+
+.cs-body {
+  background-color: var(--color-off-white);
+  color: var(--color-black);
+}
+
+/* ── Nav ──────────────────────────────────────────────────────── */
+.cs-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px var(--pad-h);
+  z-index: 100;
+  mix-blend-mode: multiply; /* stays readable over light bg */
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+.cs-nav-back,
+.cs-nav-cta {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cs-nav-back:hover,
+.cs-nav-cta:hover {
+  opacity: 0.5;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.cs-hero {
+  padding-top: 100px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.cs-hero-meta {
+  display: flex;
+  gap: var(--space-md);
+  padding: 0 var(--pad-h) var(--space-sm);
+}
+
+.cs-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.cs-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 10vw, 140px);
+  font-weight: 800;
+  line-height: 0.88;
+  padding: 0 var(--pad-h) var(--space-lg);
+  color: var(--color-white);
+}
+
+.cs-hero-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.cs-hero-image img {
+  width: 100%;
+  height: 56vw;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Intro ────────────────────────────────────────────────────── */
+.cs-intro {
+  background-color: var(--color-white);
+  padding: var(--space-xl) var(--pad-h);
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.cs-lead {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-black);
+  max-width: 22ch;
+}
+
+.cs-logotype {
+  max-width: 320px;
+}
+
+.cs-logotype img {
+  width: 100%;
+  height: auto;
+}
+
+/* ── Body copy ────────────────────────────────────────────────── */
+.cs-body-copy {
+  background-color: var(--color-off-white);
+  padding: var(--space-xl) var(--pad-h);
+}
+
+.cs-body-inner {
+  max-width: 64ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.cs-body-inner p {
+  font-family: var(--font-body);
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+/* ── Gallery ──────────────────────────────────────────────────── */
+.cs-gallery {
+  background-color: var(--color-black);
+  padding: var(--space-lg) var(--pad-h);
+}
+
+.cs-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.cs-gallery-wide {
+  grid-column: 1 / -1;
+}
+
+.cs-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cs-gallery-item {
+  overflow: hidden;
+  background-color: #111;
+}
+
+/* ── CTA ──────────────────────────────────────────────────────── */
+.cs-cta {
+  background-color: var(--color-orange);
+  padding: var(--space-xl) var(--pad-h);
+}
+
+.cs-cta-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: var(--space-sm);
+}
+
+.cs-cta-link {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 80px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-black);
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.cs-cta-link:hover {
+  transform: skewX(-3deg);
+}
+
+/* ── Footer nav ───────────────────────────────────────────────── */
+.cs-footer-nav {
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--pad-h);
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.cs-footer-back,
+.cs-footer-talk {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cs-footer-back:hover,
+.cs-footer-talk:hover {
+  opacity: 0.5;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .cs-nav {
+    font-size: 18px;
+    padding: 28px var(--pad-h);
+  }
+
+  .cs-hero {
+    padding-top: 120px;
+  }
+
+  .cs-hero-image img {
+    height: 46vw;
+  }
+
+  .cs-intro {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    padding: var(--space-xl) var(--pad-h);
+  }
+
+  .cs-gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .cs-gallery-wide {
+    grid-column: 1 / -1;
+  }
+}
