@@ -72,8 +72,8 @@
 .hero-image-wrapper {
   position: relative;
   z-index: 2;
-  margin-top: 6vw;
-  margin-bottom: -56vw;
+  margin-top: 16vw;
+  margin-bottom: -66vw;
   padding: 0;
   display: flex;
   justify-content: center;
