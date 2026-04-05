@@ -166,6 +166,51 @@
   background-color: #111;
 }
 
+/* ── Stats ────────────────────────────────────────────────────── */
+.cs-stats {
+  background-color: var(--color-off-white);
+  padding: var(--space-xl) var(--pad-h);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.cs-stat-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, 120px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-black);
+}
+
+.cs-stat-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 20px);
+  color: var(--color-black);
+  opacity: 0.65;
+  margin-top: 0.4em;
+  max-width: 36ch;
+}
+
+.cs-attribution {
+  font-size: clamp(13px, 1.2vw, 16px) !important;
+  opacity: 0.5;
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .cs-stats {
+    flex-direction: row;
+    gap: var(--space-xl);
+  }
+
+  .cs-stat {
+    flex: 1;
+  }
+}
+
 /* ── CTA ──────────────────────────────────────────────────────── */
 .cs-cta {
   background-color: var(--color-orange);
