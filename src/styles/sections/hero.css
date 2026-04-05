@@ -68,12 +68,12 @@
   max-width: 26ch;
 }
 
-/* ── Hero image ─────────────────────────────────────────────── */
+/* ── Hero image — now lives in About section, pulls up into hero ── */
 .hero-image-wrapper {
   position: relative;
   z-index: 2;
-  margin-top: 6vw;
-  margin-bottom: -56vw;
+  margin-top: -50vw; /* pulls headshot up into hero's coloured band */
+  margin-bottom: 4vw;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -195,8 +195,8 @@
 /* Mobile-specific overrides (up to 767px) */
 @media (max-width: 767px) {
   .hero-image-wrapper {
-    margin-top: 8vw;
-    margin-bottom: -78vw;
+    margin-top: -65vw;
+    margin-bottom: 4vw;
   }
 
   .hero-image-wrapper img {

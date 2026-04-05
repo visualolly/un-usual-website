@@ -1,19 +1,10 @@
 .ticker {
   overflow-x: hidden;
-  background-color: var(--color-black);
-  position: relative;
-  z-index: 1;        /* behind the portrait (z-index: 2) */
-  padding-top: 30vw; /* mobile */
+  padding-top: 4vw;
   padding-bottom: 0;
 }
 
-/* Match ticker background to hero colourway */
-body[data-hero-theme="orange"] .ticker {
-  background-color: var(--color-orange);
-}
-body[data-hero-theme="light"] .ticker {
-  background-color: var(--color-off-white);
-}
+/* Ticker inherits hero background — no separate bg needed */
 
 .ticker-separator {
   height: 1px;
@@ -38,8 +29,6 @@ body[data-hero-theme="light"] .ticker-separator {
   width: max-content;
   animation: ticker-scroll 20s linear infinite;
   padding: 3vw 0;
-  position: relative;
-  z-index: 3; /* renders above headshot image (z-index: 2) */
 }
 
 .ticker-content {
@@ -82,7 +71,7 @@ body[data-hero-theme="light"] .ticker-dash {
 
 @media (min-width: 768px) {
   .ticker {
-    padding-top: 40vw; /* desktop: text sits in coloured band beside headshot */
+    padding-top: 4vw;
   }
 
   .ticker-text {

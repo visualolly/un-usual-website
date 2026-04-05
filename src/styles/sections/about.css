@@ -1,13 +1,7 @@
 .about {
   background-color: var(--color-white);
-  position: relative;   /* allows hero portrait (z-index:2) to paint on top */
-  padding: 16vw var(--pad-h) var(--space-xl);
-}
-
-@media (max-width: 767px) {
-  .about {
-    padding-top: 36vw;
-  }
+  position: relative;
+  padding: 0 var(--pad-h) var(--space-xl);
 }
 
 .about-label {
