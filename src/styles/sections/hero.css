@@ -3,7 +3,7 @@
   background-color: var(--color-black);
   position: relative;
   z-index: 2;
-  min-height: 140vw;
+  min-height: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -75,7 +75,7 @@
 .hero-image-wrapper {
   position: relative;
   z-index: 2;
-  margin-top: -50vw; /* pulls headshot up into hero's coloured band */
+  margin-top: -75vw;
   margin-bottom: 4vw;
   padding: 0;
   display: flex;
