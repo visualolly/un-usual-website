@@ -3,7 +3,7 @@
   background-color: var(--color-black);
   position: relative;
   z-index: 1;        /* behind the portrait (z-index: 2) */
-  padding-top: 40vw; /* pushes text band down to shoulder level of the portrait */
+  padding-top: 22vw; /* adjusted for larger image overlap */
   padding-bottom: 0;
 }
 
