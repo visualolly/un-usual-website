@@ -3,7 +3,7 @@
   background-color: var(--color-black);
   position: relative;
   z-index: 1;        /* behind the portrait (z-index: 2) */
-  padding-top: 22vw; /* adjusted for larger image overlap */
+  padding-top: 50vw; /* mobile: pushes text into faded zone of portrait */
   padding-bottom: 0;
 }
 
@@ -79,6 +79,10 @@ body[data-hero-theme="light"] .ticker-dash {
 }
 
 @media (min-width: 768px) {
+  .ticker {
+    padding-top: 40vw; /* desktop: portrait is shorter, less padding needed */
+  }
+
   .ticker-text {
     font-size: 8.5vw;
   }
