@@ -3,7 +3,7 @@
   background-color: var(--color-black);
   position: relative;
   z-index: 1;        /* behind the portrait (z-index: 2) */
-  padding-top: 82vw; /* mobile: push text below headshot bottom */
+  padding-top: 30vw; /* mobile */
   padding-bottom: 0;
 }
 
@@ -80,7 +80,7 @@ body[data-hero-theme="light"] .ticker-dash {
 
 @media (min-width: 768px) {
   .ticker {
-    padding-top: 20vw;
+    padding-top: 40vw; /* desktop: text sits in coloured band beside headshot */
   }
 
   .ticker-text {
