@@ -38,6 +38,8 @@ body[data-hero-theme="light"] .ticker-separator {
   width: max-content;
   animation: ticker-scroll 20s linear infinite;
   padding: 3vw 0;
+  position: relative;
+  z-index: 3; /* renders above headshot image (z-index: 2) */
 }
 
 .ticker-content {
