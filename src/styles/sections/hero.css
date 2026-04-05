@@ -3,10 +3,9 @@
   background-color: var(--color-black);
   position: relative;
   z-index: 2;
-  padding-bottom: 40vw;
+  min-height: 140vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .hero-text-wrapper {

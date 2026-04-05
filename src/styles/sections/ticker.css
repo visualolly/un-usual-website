@@ -2,6 +2,7 @@
   overflow-x: hidden;
   padding-top: 4vw;
   padding-bottom: 0;
+  margin-top: auto; /* pushes ticker to bottom of hero's flex column */
 }
 
 /* Ticker inherits hero background — no separate bg needed */
