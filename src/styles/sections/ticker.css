@@ -80,7 +80,7 @@ body[data-hero-theme="light"] .ticker-dash {
 
 @media (min-width: 768px) {
   .ticker {
-    padding-top: 58vw; /* desktop: push text below headshot bottom */
+    padding-top: 68vw; /* desktop: clear the section top boundary + letter height */
   }
 
   .ticker-text {
