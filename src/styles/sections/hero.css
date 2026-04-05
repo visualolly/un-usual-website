@@ -73,7 +73,7 @@
   position: relative;
   z-index: 2;
   margin-top: 6vw;
-  margin-bottom: -42vw;
+  margin-bottom: -56vw;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -196,7 +196,7 @@
 @media (max-width: 767px) {
   .hero-image-wrapper {
     margin-top: 8vw;
-    margin-bottom: -68vw;
+    margin-bottom: -78vw;
   }
 
   .hero-image-wrapper img {
