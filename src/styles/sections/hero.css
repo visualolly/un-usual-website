@@ -72,8 +72,8 @@
 .hero-image-wrapper {
   position: relative;
   z-index: 2;
-  margin-top: 18vw;
-  margin-bottom: -54vw;
+  margin-top: 6vw;
+  margin-bottom: -42vw;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -195,8 +195,8 @@
 /* Mobile-specific overrides (up to 767px) */
 @media (max-width: 767px) {
   .hero-image-wrapper {
-    margin-top: 24vw;
-    margin-bottom: -84vw;
+    margin-top: 8vw;
+    margin-bottom: -68vw;
   }
 
   .hero-image-wrapper img {
